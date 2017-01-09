@@ -11,12 +11,14 @@ var router = new Router();
 
 render(app, {
     root: path.join(__dirname, 'view'),
-    layout: '/',
+    layout: '',
     viewExt: 'html',
     cache: false,
     debug: true
 });
 app.context.render = co.wrap(app.context.render);
+
+console.log(path.dirname(__filename));
 
 
 var route = require("./router/routes")(app);
