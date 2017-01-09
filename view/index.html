@@ -9,6 +9,24 @@
 is a link to another nifty site
 <H1>This is a Header</H1>
 <H2>This is a Medium Header</H2>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+
+    <% for(var i=0; i<lines.length; i++) {%>
+    ctx.moveTo(<%=lines[i].x%>, <%=lines[i].y%>);
+    ctx.lineTo(<%=lines[i].x2%>, <%=lines[i].y2%>);
+    <% }%>
+
+    ctx.stroke();
+</script>
+<br>
+
 Send me mail at <a href="mailto:support@yourcompany.com">
     support@yourcompany.com</a>.
 <P> This is a new paragraph!

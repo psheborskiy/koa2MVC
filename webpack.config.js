@@ -20,6 +20,10 @@ module.exports =
         publicPath: 'bin/',
         filename: 'bundle.js'
     },
+    node: {
+        __filename: true,
+        __dirname: true
+    },
     externals: nodeModules,
     module: {
         loaders: [

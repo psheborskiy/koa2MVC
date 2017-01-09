@@ -9,7 +9,7 @@ module.exports = function(app) {
         ctx.body = 'Hello World!';
     })
     .get('/test', async (ctx, next) => {
-         await ctx.render( path.join(__dirname, 'index') );
+         await ctx.render('index');
     })
     .get('/index', myController.index);
 
