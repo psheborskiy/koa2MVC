@@ -7,10 +7,10 @@ module.exports = function () {
             for(var i = 0; i<10; i++) {
                 lines.push(
                     {
-                        x:getRandomInt(0,300),
-                        x2:getRandomInt(0,300),
-                        y:getRandomInt(0,300),
-                        y2:getRandomInt(0,300)
+                        x:getRandomInt(0,800),
+                        x2:getRandomInt(0,800),
+                        y:getRandomInt(0,400),
+                        y2:getRandomInt(0,400)
                     }
                 )
             }

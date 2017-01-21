@@ -2,12 +2,12 @@ import 'babel-polyfill';
 import Koa from 'koa';
 import co from 'co';
 import render from 'koa-ejs';
+import errorHandler from './middleware/errorHandler';
 
 const path = require('path');
-const Router = require('koa-router');
 
 var app = new Koa();
-var router = new Router();
+    app.use(errorHandler.errorHandler());
 
 render(app, {
     root: path.join(__dirname, 'view'),
@@ -20,7 +20,6 @@ app.context.render = co.wrap(app.context.render);
 
 console.log(path.dirname(__filename));
 
+require("./router/routes")(app);
 
-var route = require("./router/routes")(app);
-
-app.listen(3000);
+app.listen(2222);

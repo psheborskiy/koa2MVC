@@ -6,10 +6,8 @@ module.exports = function(app) {
     var myController = require("../controllers/simpleController")(app);
 
     router.get('/', function (ctx, next) {
+        e
         ctx.body = 'Hello World!';
-    })
-    .get('/test', async (ctx, next) => {
-         await ctx.render('index');
     })
     .get('/index', myController.index);
 
